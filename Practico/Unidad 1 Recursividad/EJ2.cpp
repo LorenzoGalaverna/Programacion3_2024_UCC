@@ -1,3 +1,8 @@
+/*
+Ejercicio N°2
+Implementar una función recursiva que determine la suma de los “n” primeros números
+ naturales ej: para n=5 mostrar por pantalla 1+2+3+4+5 y luego el resultado de la suma.
+ */
 #include <iostream>
 using namespace std;
 

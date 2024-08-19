@@ -1,3 +1,10 @@
+/*
+ Ejercicio N°4
+
+ Crear un programa que emplee recursividad para calcular el mayor de los elementos
+ de un vector de “n” tamaño dado por pantalla por el usuario.
+ */
+
 #include <iostream>
 #include <vector>
 using namespace std;
