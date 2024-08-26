@@ -20,3 +20,49 @@
 // ○ Eliminar Frases: Capacidad para eliminar frases específicas de la lista.
 // ○ Mostrar Frases: Implementa una función para mostrar las frases en el monitor
 // de manera continua, recorriendo circularmente la lista e infinitamente.
+
+
+#include <iostream>
+#include <string>
+#include <thread>
+#include <chrono>
+#include "librerias/CircList.h"
+
+using namespace std;
+
+// Función para mostrar las frases en el monitor de manera circular
+template <typename T>
+void mostrarFrasesCircular(CircList<T>& lista) {
+    if (lista.esVacia()) {
+        cout << "No hay frases para mostrar." << endl;
+        return;
+    }
+
+    int pos = 0; // Empezamos desde la posición 0
+
+    while (true) { // Bucle infinito para mostrar las frases circularmente
+        cout << lista.getDato(pos) << endl; // Mostrar el dato en la posición actual
+        pos = (pos + 1) % lista.getTamanio(); // Avanzar a la siguiente posición, circularmente
+
+        // Introducir un retraso de 3 segundos
+        std::this_thread::sleep_for(std::chrono::seconds(3)); // Retraso de 3 segundos
+    }
+}
+
+// Función principal
+int main() {
+    CircList<string> lista;
+
+    // Agregar frases a la lista
+    lista.insertarUltimo("Gran venta de fin de temporada!");
+    lista.insertarUltimo("50% de descuento en toda la tienda.");
+    lista.insertarUltimo("Compra uno y llevate el segundo a mitad de precio.");
+    lista.insertarUltimo("Visitanos hoy y obten un regalo sorpresa.");
+
+    std::cout << "Mostrando frases de anuncios en el monitor:" << std::endl;
+
+    // Mostrar las frases en el monitor de manera circular
+    mostrarFrasesCircular(lista);
+
+    return 0;
+}
