@@ -21,14 +21,12 @@
 // ○ Mostrar Frases: Implementa una función para mostrar las frases en el monitor
 // de manera continua, recorriendo circularmente la lista e infinitamente.
 
-
+using namespace std;
 #include <iostream>
 #include <string>
+#include "librerias/CircList.h"
 #include <thread>
 #include <chrono>
-#include "librerias/CircList.h"
-
-using namespace std;
 
 // Función para mostrar las frases en el monitor de manera circular
 template <typename T>
@@ -44,8 +42,8 @@ void mostrarFrasesCircular(CircList<T>& lista) {
         cout << lista.getDato(pos) << endl; // Mostrar el dato en la posición actual
         pos = (pos + 1) % lista.getTamanio(); // Avanzar a la siguiente posición, circularmente
 
-        // Introducir un retraso de 3 segundos
-        std::this_thread::sleep_for(std::chrono::seconds(3)); // Retraso de 3 segundos
+        // Introducir un retraso de 1 segundo
+        this_thread::sleep_for(chrono::seconds(3)); // Retraso de 1 segundo
     }
 }
 
