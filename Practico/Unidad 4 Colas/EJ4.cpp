@@ -28,23 +28,6 @@ int sumarHastaN(Cola<int> &cola, int n) {
         cola.encolar(colaAux.desencolar());
     }
 
-    // // Si "n" no se encuentra, sumar los elementos restantes de la cola
-    // if (!encontrado) {
-    //     int sumaTotal = 0;
-
-    //     // Transferir todos los elementos restantes a colaAux
-    //     while (!cola.esVacia()) {
-    //        sumaTotal += cola.desencolar();
-    //     }
-
-    //     // Restaurar la cola original después de sumar
-    //     while (!colaAux.esVacia()) {
-    //         cola.encolar(colaAux.desencolar());
-    //     }
-
-    //     return sumaTotal;
-    // }
-
     return suma;
 }
 
