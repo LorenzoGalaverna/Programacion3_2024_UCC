@@ -23,6 +23,7 @@ int main() {
             std::cout << "El libro con ID 75 no está en la biblioteca." << std::endl;
         }
     }
+    biblioteca.print(); // Imprime el árbol en orden (en este caso, por IDs de libros)
 
     // Eliminar el libro con ID 52 (prestado)
     biblioteca.remove(52);

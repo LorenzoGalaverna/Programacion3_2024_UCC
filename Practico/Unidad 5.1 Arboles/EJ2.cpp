@@ -16,7 +16,7 @@ int main()
     inventario.put(7000);
 
     // Mostrar el inventario inicial en inorden
-    std::cout << "Inventario inicial (inorden): ";
+    std::cout << "Inventario inicial (inorden): \n" <<endl;
     inventario.print();
 
     // Paso 2: Eliminar los productos comprados
@@ -24,14 +24,14 @@ int main()
     inventario.remove(6003);
 
     // Mostrar el inventario después de las eliminaciones
-    std::cout << "Inventario después de eliminar los productos 2002 y 6003 (inorden): ";
+    std::cout << "Inventario después de eliminar los productos 2002 y 6003 (inorden): "<<endl;
     inventario.print();
 
     // Paso 3: Agregar el nuevo producto al inventario
     inventario.put(2500);
 
     // Mostrar el inventario actualizado
-    std::cout << "Inventario actualizado después de agregar el producto 2500 (inorden): ";
+    std::cout << "Inventario actualizado después de agregar el producto 2500 (inorden): "<<endl;
     inventario.print();
 
     // Paso 4: Verificar si el código 4001 está en el sistema
